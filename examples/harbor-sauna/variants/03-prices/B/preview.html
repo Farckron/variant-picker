@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Visit counter</title><link rel="icon" href="data:,"><link rel="stylesheet" href="../../../shared/base.css">
+<style>main.wrap{text-align:center;gap:24px}h2{font-size:clamp(34px,5vw,60px)}input{width:min(640px,86vw);margin:auto;accent-color:var(--ember);height:44px}b{font:600 clamp(60px,12vw,150px)/1 Georgia,"Noto Serif",serif;color:var(--ember)}</style>
+<main class="wrap"><h2><span id="v"></span> a month?</h2><input id="r" type="range" min="1" max="12" value="4" aria-label="Visits per month"><b id="p"></b><p id="o"></p></main>
+<script>(()=>{const $=s=>document.querySelector(s),f=()=>{const n=+$("#r").value;$("#v").textContent=n+(n>1?" visits":" visit");const[o,p]=n===1?["Single visit",14]:n<5?["From a ten visit card, EUR 11 each",11*n]:["Month",45];$("#p").textContent="€"+p;$("#o").textContent=o};$("#r").addEventListener("input",f);f()})()</script>
+</html>
